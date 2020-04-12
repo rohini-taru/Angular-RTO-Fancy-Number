@@ -2,3 +2,30 @@
 <p>
   Start editing to see some magic happen :)
 </p>
+
+<mat-form-field appearance="fill">
+  <input matInput placeholder="minRange" [(ngModel)]="minRange">
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+    <input matInput placeholder="maxRange" [(ngModel)]="maxRange">
+</mat-form-field>
+<br>
+<mat-form-field appearance="fill">
+    <input matInput placeholder="singleDigit" [(ngModel)]="singleDigit">
+</mat-form-field>
+
+<mat-form-field>
+  <button matButton (click)="printFancyNumber($event)">Print Fancy Number</button>
+</mat-form-field> 
+
+<br>
+<ul>
+  <li *ngFor="let x of resultArr">
+    {{x}}
+  </li>
+</ul>
+
+
+
+
