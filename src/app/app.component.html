@@ -1,7 +1,16 @@
-<hello name="{{ name }}"></hello>
+<h5>Print Fancy Number</h5>
 <p>
-  Start editing to see some magic happen :)
+Given: 
+(1) Range of numbers (2) Single digit number
+</p><p>
+Conditions:
+(1) Number should contain given single digit AND
+</p><p>
+(2) Sum of digits of the number should be equal to given single digit number
 </p>
+<span>------------------------------</span>
+<p>Assumptions: (1) Min range < max Range (2) Range numbers are not empty and valid numbers (3) Single digit number is of length one and valid number from 0 to 9</p>
+<br>
 
 <mat-form-field appearance="fill">
   <input matInput placeholder="minRange" [(ngModel)]="minRange">
@@ -26,6 +35,12 @@
   </li>
 </ul>
 
-
-
-
+<span>------------------------------</span>
+<div>Output Cases:</div>
+<div>(1) Range: 18 to 22 for single digit 2 => [20]</div>
+<div>(2) Range: 5 to 500 for single digit 9 => [20, 200]</div>
+<div>(3) Range: 1000 to 5000 for single digit 2 => [2000]</div>
+<div>(4) Range: 2000 to 4000 for single digit 2 => [2000]</div>
+<div>(5) Range: 2000 to 4000 for single digit 3 => [3000]</div>
+<div>(6) Range: 2000 to 4000 for single digit 4 => [4000]</div>
+<div>(7) Range: 2000 to 4000 for single digit 5 => 'No fancy number found!</div>

@@ -16,7 +16,6 @@ export class FancyNumberService {
     numDigits.forEach(x => {
       sum += +x;
     });
-    //alert('sum = ' + sum);
     let sumFlag = (+singleDigit == +sum )? true : false;
     return sumFlag;
   }
@@ -27,7 +26,6 @@ export class FancyNumberService {
     numDigits.forEach(x => {
       +singleDigit == +x ? presentFlag = true : null;
     });
-    ///alert('present = ' + presentFlag);
     return presentFlag;
   }
 

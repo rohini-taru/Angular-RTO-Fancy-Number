@@ -8,9 +8,8 @@ import { FancyNumberService } from './fancy-number.service';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  name = 'Angular';
-  minRange: number = 18;
-  maxRange: number = 22;
+  minRange: number = 2000;
+  maxRange: number = 4000;
   singleDigit: number = 2;
   resultFlag: Boolean = false;
   resultArr = [];
@@ -19,7 +18,6 @@ constructor(private fns: FancyNumberService) {
 
 }
   printFancyNumber(event) {
-    //event.stopPropagation();
     this.resultArr = [];
     this.resultFlag = false;
 
@@ -29,6 +27,7 @@ constructor(private fns: FancyNumberService) {
         this.resultArr.push(i);
       }
     }
+    this.resultArr.length == 0 ? this.resultArr.push('No fancy number found!'): null ;
     this.resultFlag = true;
   }
 }
